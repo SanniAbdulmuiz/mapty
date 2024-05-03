@@ -152,8 +152,8 @@ class App {
 
   _newWorkout(e) {
     const validInputs = (...inputs) =>
-      inputs.every(inp => Number.isFinite(inp));
-    const allPositive = (...inputs) => inputs.every(inp => inp > 0);
+      inputs.every(inp => Number.isFinite(inp)); //Setting conditions
+    const allPositive = (...inputs) => inputs.every(inp => inp > 0); //Setting conditions
 
     e.preventDefault();
 
@@ -166,7 +166,7 @@ class App {
 
     // If workout running, create running object
     if (type === 'running') {
-      const cadence = +inputCadence.value;
+      const cadence = +inputCadence.value; //Converting to number
 
       // Check if data is valid
       if (
@@ -183,7 +183,7 @@ class App {
 
     // If workout cycling, create cycling object
     if (type === 'cycling') {
-      const elevation = +inputElevation.value;
+      const elevation = +inputElevation.value; //Converting to number
 
       if (
         !validInputs(distance, duration, elevation) ||
